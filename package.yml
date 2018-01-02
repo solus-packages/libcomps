@@ -1,0 +1,21 @@
+name       : libcomps
+version    : 0.1.8
+release    : 1
+source     :
+    - https://github.com/rpm-software-management/libcomps/archive/libcomps-0.1.8.tar.gz : 639d85d862f642ab35b3019a0765dbe1894516e4422cb115dd2baaa4de389860
+license    : GPL-2.0+
+component  : programming.library
+summary    : Comps XML file manipulation library
+description: |
+    Libcomps is library for structure-like manipulation with content of
+    comps XML files. Supports read/write XML file, structure(s) modification.
+builddeps  :
+    - pkgconfig(check)
+    - pkgconfig(expat)
+    - pkgconfig(python3)
+setup      : |
+    %cmake libcomps/ -DPYTHON_DESIRED:STRING=3
+build      : |
+    %make
+install    : |
+    %make_install
