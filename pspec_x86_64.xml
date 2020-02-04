@@ -2,8 +2,8 @@
     <Source>
         <Name>libcomps</Name>
         <Packager>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0+</License>
         <PartOf>programming.library</PartOf>
@@ -11,7 +11,7 @@
         <Description xml:lang="en">Libcomps is library for structure-like manipulation with content of
 comps XML files. Supports read/write XML file, structure(s) modification.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libcomps</Name>
@@ -21,9 +21,9 @@ comps XML files. Supports read/write XML file, structure(s) modification.
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.6/site-packages/libcomps/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.6/site-packages/libcomps/_libpycomps.so</Path>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/libcomps/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.7/site-packages/libcomps/_libpycomps.so</Path>
+            <Path fileType="library">/usr/lib64/libcomps.so.0.1.6</Path>
         </Files>
     </Package>
     <Package>
@@ -34,20 +34,44 @@ comps XML files. Supports read/write XML file, structure(s) modification.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="2">libcomps</Dependency>
+            <Dependency release="3">libcomps</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_bradix.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_default.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_dict.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_doc.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_doccategory.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_docenv.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_docgroup.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_docgroupid.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_docpackage.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_elem.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_hslist.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_log.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_log_codes.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_mm.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_mradix.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_obj.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_objdict.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_objlist.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_objmradix.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_objradix.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_parse.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_radix.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_set.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_utils.h</Path>
+            <Path fileType="header">/usr/include/libcomps/comps_validate.h</Path>
+            <Path fileType="library">/usr/lib64/libcomps.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2018-01-30</Date>
+        <Update release="3">
+            <Date>2020-01-27</Date>
             <Version>0.1.8</Version>
             <Comment>Packaging update</Comment>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>
